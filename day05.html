@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>2022.05.24</title>
+</head>
+<body>
+    <!-- setInterval로 알림창 만들기 -->
+    <h1>카운트가 끝나면 종료되는 타이머 알림창</h1>
+
+    <div class="alert">
+        <span class="time">5</span>초 이내 구매 시 사은품 증정!!!!!!!!!!
+    </div>
+
+    <script>
+        const alert = document.querySelector('.alert');
+        const time = document.querySelector('.time');
+
+        let count = 5;
+
+        setInterval(function(){
+            count--;
+            if(count >= 0){
+                time.textContent = count;
+            }
+            if(count == 0){
+                alert.style.display = 'none';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
