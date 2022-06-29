@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬스토리지 localStorage</title>
+</head>
+<body>
+    <script>
+        // 애플리케이션 -> 로컬 스토리지 -> http:// ~~
+        
+        // localStorage.setItem('one', '하나');
+        // console.log(localStorage.getItem('one'));
+
+
+        memo = [];
+        memo.push('메모1');
+        memo.push('메모2');
+        
+        // localStorage에 값 저장
+        localStorage.setItem('메모', memo);
+
+        // 저장한 값 콘솔에 출력해보기
+        console.log(localStorage.getItem('메모'));
+        // console.log(localStorage.getItem('메모').split(',')); 
+
+        // 저장한 값 다른 값으로 교체하기
+        localStorage.setItem('메모' , 'memo change!');
+
+        // 값 삭제하기
+        localStorage.removeItem('메모');
+    </script>
+</body>
+</html>
